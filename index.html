@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="csrf-token" content="oPx17ARuBj0nnP5Iz6mkikVrrKQYCmKltj5g5yw5">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <title>natalialira.com - Home</title>
+    <script type="text/javascript" src="//fast.fonts.net/jsapi/0198f708-6883-43fb-85d4-525257fce00a.js"></script>
+    <!-- <link type="text/css" rel="stylesheet" href="//fast.fonts.net/cssapi/0198f708-6883-43fb-85d4-525257fce00a.css"/> -->
+    <link rel="stylesheet" type="text/css" href="https://francescatorzo.it/css/builds/app.css?1670498307">
+</head>
+<body>
+    <header class="smoothfont noselect">
+        <a class="logo" href="index.html">Natalia Lira Salcido</a>
+        <nav>
+            <ul class="nav0">
+                <li><a href="atelier.html">Atelier</a></li>
+                <li>
+                    <a href="work.html">Proyectos</a>
+                    <ul class="nav1">
+                        <li><a href="/works/e11-chaosmos-2020">e11 - chaosmos, 2020</a></li>
+                        <li><a href="/works/p11-maniera-paolo-2020">p11 - maniera paolo, 2020</a></li>
+                        <li><a href="/works/n16-yangshuo-pavilion-2019">n16 - yangshuo pavilion, 2019</a></li>
+                        <li><a href="/works/r18-bishan-dance-school-2019">r18 - bishan dance school, 2019</a></li>
+                        <li><a href="/works/p11-maniera-larga-2020">p11 - maniera larga, 2020</a></li>
+                        <li><a href="/works/c16-cst-tenero-switzerland-2017">c16 - CST, tenero, switzerland, 2017</a></li>
+                        <li><a href="/works/p11-maniera-kimono-2020">p11 - maniera kimono, 2020</a></li>
+                        <li><a href="/works/n09-z33-hasselt-belgium-2011-2019">n09 - z33, hasselt, belgium, 2011-2019</a></li>
+                        <li><a href="/works/p11-maniera-drago-2020">p11 - maniera drago, 2020</a></li>
+                        <li><a href="/works/n02-casa-due-sorano-italy-2007-2010">n02 - casa due, sorano, italy, 2007-2010</a></li>
+                        <li><a href="/works/p10-maniera-cavalluccio-2018">p10 - maniera cavalluccio, 2018</a></li>
+                        <li><a href="/works/e10-labyrinth-2007">e10 - labyrinth, 2007</a></li>
+                        <li><a href="/works/n11-house-in-luque-cordoba-2012">n11 - house in luque, cordoba, 2012</a></li>
+                    </ul>
+                </li>
+                <li><a href="contact.html">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <style>
+            .header-container {
+              text-align: center;
+            }
+            
+            .image-container {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              height: 400px; /* Establece la altura deseada para el contenedor de imágenes */
+              overflow: hidden; /* Evita que las imágenes excedan el tamaño del contenedor */
+              margin-top: 150px; /* Ajusta el margen superior para separar el encabezado */
+            }
+            
+            .image {
+              position: absolute; /* Establece la posición absoluta para las imágenes */
+              width: 100%; /* Establece el ancho de las imágenes al 100% del contenedor */
+              height: 100%; /* Establece la altura de las imágenes al 100% del contenedor */
+              object-fit: contain; /* Ajusta las imágenes dentro del tamaño especificado sin distorsión */
+              transition: opacity 0.5s; /* Agrega una transición de opacidad suave */
+            }
+            
+            .image.active {
+              opacity: 1; /* Establece la opacidad en 1 para la imagen activa */
+            }
+            
+            .image.hidden {
+              opacity: 0; /* Establece la opacidad en 0 para las imágenes ocultas */
+            }
+            </style>
+            
+            <div class="image-container">
+                <img class="image image-size active" src="HOME/1.jpg" alt="Imagen 1">
+                <img class="image image-size hidden" src="HOME/2.jpg" alt="Imagen 2">
+                <img class="image image-size hidden" src="HOME/3.jpg" alt="Imagen 3">
+                <img class="image image-size hidden" src="HOME/4.jpg" alt="Imagen 4">
+                <img class="image image-size hidden" src="HOME/5.jpg" alt="Imagen 5">
+                <img class="image image-size hidden" src="HOME/6.jpg" alt="Imagen 6">
+                <img class="image image-size hidden" src="HOME/IMG_6422.JPG" alt="Imagen 7">
+            </div>
+        <!-- Agrega más elementos .image-container con las rutas y descripciones de tus imágenes -->
+    
+        <script type="text/javascript" src="https://francescatorzo.it/js/builds/app.js?1670498307"></script>
+        
+        <script>
+            var images = document.querySelectorAll('.image');
+            var currentIndex = 0;
+        
+            function hideAllImages() {
+                images.forEach(function(image) {
+                    image.classList.add('hidden'); // Agrega la clase 'hidden' para ocultar las imágenes
+                    image.classList.remove('active'); // Elimina la clase 'active' para desactivar las imágenes
+                });
+            }
+        
+            function showNextImage() {
+                hideAllImages();
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active'); // Agrega la clase 'active' para mostrar la siguiente imagen
+                images[currentIndex].classList.remove('hidden'); // Elimina la clase 'hidden' para mostrar la siguiente imagen
+            }
+        
+            // Ocultar todas las imágenes excepto la primera
+            hideAllImages();
+            images[currentIndex].classList.add('active'); // Agrega la clase 'active' para mostrar la primera imagen
+            images[currentIndex].classList.remove('hidden'); // Elimina la clase 'hidden' para mostrar la primera imagen
+        
+            setInterval(showNextImage, 3000); // Cambia la duración aquí (en milisegundos)
+        </script>
+    </header>
+    <div class="sideMenuToggle">
+        <div class="menu-btn"></div>
+    </div>
+    <div id="app" class="page-transition"></div>
+    <script type="text/javascript" src="https://francescatorzo.it/js/builds/app.js?1670498307"></script>
+</body>
+</html>
